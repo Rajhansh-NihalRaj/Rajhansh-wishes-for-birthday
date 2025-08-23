@@ -255,6 +255,41 @@ body {
     }
 }
 
+/* --- NEW: Decorative Corner Flourishes --- */
+.corner-flourish {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-color: var(--secondary-color);
+    border-style: solid;
+    z-index: 1003;
+    filter: drop-shadow(0 0 5px var(--secondary-color));
+}
+.flourish-tl {
+    top: -5px;
+    left: -5px;
+    border-width: 4px 0 0 4px;
+    border-radius: 15px 0 0 0;
+}
+.flourish-tr {
+    top: -5px;
+    right: -5px;
+    border-width: 4px 4px 0 0;
+    border-radius: 0 15px 0 0;
+}
+.flourish-bl {
+    bottom: -5px;
+    left: -5px;
+    border-width: 0 0 4px 4px;
+    border-radius: 0 0 0 15px;
+}
+.flourish-br {
+    bottom: -5px;
+    right: -5px;
+    border-width: 0 4px 4px 0;
+    border-radius: 0 0 15px 0;
+}
+
 
 /* VIBRANT BANNER DESIGN */
 .birthday-banner-container {
@@ -384,15 +419,31 @@ body:hover .cursor-follower {
 <div class="background-balloon" style="background:lightblue; left:40%; top:10%; animation-delay:1s;"></div>
 
 <div class="corner-image-container top-left" style="animation-delay: 0s;">
+    <div class="corner-flourish flourish-tl"></div>
+    <div class="corner-flourish flourish-tr"></div>
+    <div class="corner-flourish flourish-bl"></div>
+    <div class="corner-flourish flourish-br"></div>
     <img src="Lipika1.jpg" alt="Lipika 1" class="corner-image">
 </div>
 <div class="corner-image-container top-right" style="animation-delay: 1.5s;">
+    <div class="corner-flourish flourish-tl"></div>
+    <div class="corner-flourish flourish-tr"></div>
+    <div class="corner-flourish flourish-bl"></div>
+    <div class="corner-flourish flourish-br"></div>
     <img src="Lipika2.jpg" alt="Lipika 2" class="corner-image">
 </div>
 <div class="corner-image-container bottom-left" style="animation-delay: 3s;">
+    <div class="corner-flourish flourish-tl"></div>
+    <div class="corner-flourish flourish-tr"></div>
+    <div class="corner-flourish flourish-bl"></div>
+    <div class="corner-flourish flourish-br"></div>
     <img src="Lipika3.jpg" alt="Lipika 3" class="corner-image">
 </div>
 <div class="corner-image-container bottom-right" style="animation-delay: 4.5s;">
+    <div class="corner-flourish flourish-tl"></div>
+    <div class="corner-flourish flourish-tr"></div>
+    <div class="corner-flourish flourish-bl"></div>
+    <div class="corner-flourish flourish-br"></div>
     <img src="Lipika4.jpg" alt="Lipika 4" class="corner-image">
 </div>
 
@@ -628,4 +679,3 @@ function showMessages() {
 </script>
 </body>
 </html>
-
