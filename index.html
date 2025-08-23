@@ -255,7 +255,7 @@ body {
     }
 }
 
-/* --- NEW: Decorative Corner Flourishes --- */
+/* --- Decorative Corner Flourishes --- */
 .corner-flourish {
     position: absolute;
     width: 25px;
@@ -288,6 +288,43 @@ body {
     right: -5px;
     border-width: 0 4px 4px 0;
     border-radius: 0 0 15px 0;
+}
+
+/* --- NEW: Decorative Bow Wrapper --- */
+.image-bow {
+    /* This is the center knot */
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    width: 16px;
+    height: 16px;
+    background: var(--secondary-color); /* Gold knot */
+    border-radius: 50%;
+    z-index: 1004; /* Above the flourishes */
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
+.image-bow::before, .image-bow::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 25px;
+    background: var(--primary-color); /* Pink loop */
+    border: 2px solid var(--secondary-color);
+    z-index: -1; /* Place behind the knot */
+}
+/* Left loop */
+.image-bow::before {
+    border-radius: 50% 50% 0 50%;
+    transform: rotate(-25deg);
+    top: -15px;
+    left: -25px;
+}
+/* Right loop */
+.image-bow::after {
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(25deg);
+    top: -15px;
+    left: 10px;
 }
 
 
@@ -419,6 +456,7 @@ body:hover .cursor-follower {
 <div class="background-balloon" style="background:lightblue; left:40%; top:10%; animation-delay:1s;"></div>
 
 <div class="corner-image-container top-left" style="animation-delay: 0s;">
+    <div class="image-bow"></div>
     <div class="corner-flourish flourish-tl"></div>
     <div class="corner-flourish flourish-tr"></div>
     <div class="corner-flourish flourish-bl"></div>
@@ -426,6 +464,7 @@ body:hover .cursor-follower {
     <img src="Lipika1.jpg" alt="Lipika 1" class="corner-image">
 </div>
 <div class="corner-image-container top-right" style="animation-delay: 1.5s;">
+    <div class="image-bow"></div>
     <div class="corner-flourish flourish-tl"></div>
     <div class="corner-flourish flourish-tr"></div>
     <div class="corner-flourish flourish-bl"></div>
@@ -433,6 +472,7 @@ body:hover .cursor-follower {
     <img src="Lipika2.jpg" alt="Lipika 2" class="corner-image">
 </div>
 <div class="corner-image-container bottom-left" style="animation-delay: 3s;">
+    <div class="image-bow"></div>
     <div class="corner-flourish flourish-tl"></div>
     <div class="corner-flourish flourish-tr"></div>
     <div class="corner-flourish flourish-bl"></div>
@@ -440,6 +480,7 @@ body:hover .cursor-follower {
     <img src="Lipika3.jpg" alt="Lipika 3" class="corner-image">
 </div>
 <div class="corner-image-container bottom-right" style="animation-delay: 4.5s;">
+    <div class="image-bow"></div>
     <div class="corner-flourish flourish-tl"></div>
     <div class="corner-flourish flourish-tr"></div>
     <div class="corner-flourish flourish-bl"></div>
